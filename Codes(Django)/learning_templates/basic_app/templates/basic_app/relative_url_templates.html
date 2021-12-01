@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1>welcome to url page</h1>
+    <a href="{% url 'basic_app:other' %}">The other page</a><br>
+    <!-- in the above href basic_app is there because we have set app_name as basic_app in the
+      urls.py file and not because it is the file name, and other is what url we want to reference
+      from the urls.py file..note that we kept the "name" parameter as other there
+    -->
+    <!-- for linking to admin page -->
+    <a href="{%  url 'admin:index' %}">The admin page</a><br>
+    <!-- for linking to the index page -->
+    <a href="{% url 'index' %}">the index page</a>
+  </body>
+</html>

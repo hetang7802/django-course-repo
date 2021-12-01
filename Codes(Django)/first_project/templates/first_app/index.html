@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+{% load static %}
+<!-- <html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+  <title>First App</title>
+  <link rel="stylesheet" href="{% static "css/myStyle.css" %}"/>
+  </head>
+  <body>
+    <h1>hello i am trying to insert a picture</h1>
+    <img src="{% static "images/wp12.jpg" %}" alt="unable to load pic!">
+  </body>
+</html> -->
+
+<!-- new from here -->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>DjangoLvl2</title>
+    <link rel="stylesheet" href="{% static "CSS/myStyle.css" %}"/>
+  </head>
+  <body>
+    <h1>Hello welcome to django lvl 2</h1>
+    <h2>here are your records</h2>
+
+    <div class="djangtwo">
+      {% if access_records %}
+        <table>
+          <thead>
+            <th>
+              Name of site
+            </th>
+            <th>
+              Date accessed
+            </th>
+          </thead>
+          {% for acc in access_records%}
+          <tr>
+            <td>{{ acc.name }}</td>
+            <td>{{ acc.date }}</td>
+          </tr>
+          {% endfor %}
+        </table>
+      {% else %}
+        <p>no records found :(</p>
+      {% endif %}
+
+    </div>
+  </body>
+</html>
