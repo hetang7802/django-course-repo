@@ -1,0 +1,72 @@
+to link with jQuery visit code.jQuery.com
+copy the link (<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>)
+and paste it in the html file
+
+We can use the $ sign to select elements from the DOM!
+Example: $('a') will select all anchor tags
+        $('.container') will select all containers
+
+
+// Grab li tags and change their css properties differently
+var listItems = $('li')
+listItems.css('color', 'green')
+listItems.eq(0).css('color', 'pink') //change only for the first list item
+listItems.eq(-1).css('color', 'purple')  // chanbe only for the last list item
+
+
+$('h1').text("new text") will change the text of all h1 to "new text"
+
+var h1tag=$('h1')
+h1tag.html('<em><strong>Another change of text</strong></em>')
+// this will change the h1 to "another change of text" in emphasized way
+
+//changing the attribute of input
+$('input').eq(0).val("new text")
+//this will change the value of first input type in the html
+
+// add/remove/toggle class
+(here turnBlue and turnRed classes are to be defined first(refer jQuery.html))
+// Add and remove class for h3
+$('h3').addClass('turnBlue')
+$('h3').removeClass('turnBlue')
+
+// Toggle class twice for first paragraph
+$('p').eq(0).toggleClass('turnRed')
+$('p').eq(0).toggleClass('turnRed')
+
+
+-------------lect2(jquery events)--------------
+
+for documentation: https://api.jquery.com/category/events/
+
+// Add event for li when clicked
+$('li').click(function(){
+	console.log("one of li was clicked!")
+})
+
+// Change h1 whenever its clicked
+$('h1').click(function(){
+	$(this).text("New text")
+})
+
+// Change class for h3 when key was pressed in text box
+$('input').eq(0).keypress(function(){
+	$('h3').toggleClass('turnBlue')
+})
+
+// Same as previous for h2 but only when key Enter is pressed
+$('input').eq(0).keypress(function(event){
+	if (event.which === 13){                 //event.which return the value(ascii code) for the key which is pressed
+		$('h2').toggleClass('turnRed')
+	}
+})
+
+// Add event for h1 when double clicked in another way
+$('h1').on('dblclick', function(){
+	$(this).toggleClass('turnBlue')
+})
+
+// Animation for container when submit button pressed
+$('input').eq(-1).on('click', function(){
+	$('.container').slideUp()              //slideUp is animation available in jQuery, other animations can be viewed in the link of documetation give above
+})

@@ -1,0 +1,35 @@
+some important doc attributes
+
+document.URL
+document.body
+document.head
+document.links
+
+
+methods for grabbing elements from the DOM:
+document.getElementById()
+document.getElementByClassName()
+document.getElementByTagName()  //for exampel the anchor tag
+document.querySelector() gives the first object matching the css style selector
+document.querySelectorAll() gives all the objects matching the css style selector
+
+anything used for css can be passed into queryselector
+
+-------lect2-----------
+
+to edit styles, we've already seen we can use the .style tag. Now if we want to
+edit ACTUAL HTML OR TEXT or attribute we can use different methods. If you want to
+change the text.html content, or attributes you can use the following
+
+myvariable.textContent - This returns just the text (so cannot chang something like style of the text)
+myvariable.innerHTML - This returns the actual html (so we can use html tags to change style)
+myvariable.getAttribute() - This returns the original attribute (takes the single parameter which is the attribute we want)
+myvariable.setAttribute() - This allowed you to set an attribute (takes two parameter: the attribute and the value we want to set to it)
+
+
+--------lect3-----------
+
+listening to an event
+syntax: myvariable.ddEventListener(event,func);
+for exampel:var head=document.querySelector('h1')
+            head.addEventListener("click",changeColor)

@@ -1,0 +1,11 @@
+td{
+  border: 5px black solid;
+  text-align: center;
+  font-size: 100px;
+  height: 150px;
+  width: 150px;
+}
+
+#jumbo{
+  background: #FF6666;
+}
