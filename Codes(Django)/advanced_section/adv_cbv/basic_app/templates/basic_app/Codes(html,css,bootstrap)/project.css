@@ -1,0 +1,32 @@
+h1
+{
+  font-family: fantasy;
+  font-weight: bold;
+}
+
+h2{
+  font-weight: bold;
+}
+
+body{
+  font-family: cursive;
+  border: #209e9e 40px solid;
+  margin: 0px;
+  border-top: 0px;
+  padding: 0px 10px 10px 10px;
+  background: #0c2338;
+  text-align: center;
+  color: white;
+}
+form{
+    font-size: 1.5em;
+}
+
+#subButton{
+  font-weight: bold;
+  color: black;
+  height: 50px;
+  width: 100px;
+  background-color:#f0ac59;
+  border-radius: 10px;
+}

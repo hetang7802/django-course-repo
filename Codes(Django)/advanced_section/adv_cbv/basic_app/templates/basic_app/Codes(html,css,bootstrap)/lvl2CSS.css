@@ -1,0 +1,31 @@
+
+/* this is the font family we added in the html file */
+p {
+   font-family: 'GidolinyaRegular';
+   font-weight: normal;
+   font-style: normal;
+}
+
+body{
+  font-size: 15px;
+}
+
+#two{
+  border: 2px dotted;
+  font-weight:lighter;
+  font-size: 1em;
+}
+
+/* try to explore box model concep in heading 1 */
+h1{
+  /* margin: auto; */
+  /*auto margin takes care that the border is center alligned*/
+  /* for manual assignment of margin use top right bottom left */
+  margin: 10px 200px 300px 50px;
+  border: 4px red dotted;
+  width: 50%;
+  /* the width will be 50% of the total width of window */
+  padding: 14px;
+  /*padding is the space between border and content*/
+  text-align: center;
+}

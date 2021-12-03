@@ -1,0 +1,79 @@
+/* selected tag{
+  property: value;
+} */
+
+/* h1{
+  color: brown;
+} */
+/* rgba gives a additional parameter alpha which
+decides the transperency of color */
+/* p{
+  color: rgb(255, 2, 199);
+}
+li{
+  color: #134ca1;
+} */
+/* div{ */
+  /* background: grey;
+  background can be an online image too*/
+  /* background: url(image.jpg);
+  border-width: thick;
+  border-color: pink;
+  border-style: groove;
+}
+p{
+  color: green;
+}
+span{
+  color: green;
+} */
+
+
+
+
+/* -------third video from here---------- */
+/* put a "." for indicating class */
+/* .firstDiv{
+  color: pink;
+}
+.secondDiv{
+  color: orange;
+} */
+
+/* put a "#" to indicate id */
+/* #singledout{
+  color: green;
+  text-decoration: line-through;
+}
+
+h3+ul{
+  border: 2px dotted magenta;
+}
+
+li  a{
+  color: teal;
+}
+li a[href="https://www.google.com"]{
+  color: brown;
+} */
+
+/* we can use "*" to apply property to all elements in web */
+
+
+
+
+
+/* --------------fifth video----------------- */
+/* Specificity normal<class<id */
+li{
+  background: pink;
+  color: red;
+}
+
+.topItems{
+  color: blue;
+}
+
+#second{
+  border: 3px magenta dotted;
+}
