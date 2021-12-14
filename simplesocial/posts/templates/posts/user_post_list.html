@@ -1,0 +1,15 @@
+{% extends 'posts/post_base.html'%}
+
+
+{% block post_content %}
+<h1 style="color:cyan">These are the posts by {{user.username}}</h1>
+
+<div class="col-md-8">
+  <ul>
+    {% for post in post_list %}
+    <br><li class="post-list">{% include 'posts/_post.html'%}</li>
+    {% endfor %}
+  </ul>
+
+</div>
+{% endblock %}

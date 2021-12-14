@@ -1,0 +1,42 @@
+{% extends "groups/group_base.html" %}
+
+{% block pregroup %}
+
+<!-- We have a model named Group which has a name so the below template can be
+used. This is available for the class based views, we should use lower case alphabet
+fro refering a group  -->
+<h1>{{group.name}}</h1>
+<h2>Member Count: {{group.members.count}}</h2>
+
+<div class="content">
+  {% if user in group.members.all %}
+
+  <a href="{%url 'groups:leave' slug=group.slug%}" class="btn btn-lg btn-fill btn-warning">
+    <span class="glyphicon glyphicon-remove-circle"></span>Leave</a>
+
+  {% else %}
+  <a href="{%url 'groups:join' slug=group.slug%}" class="btn btn-lg btn-fill btn-warning">
+    <span class="glyphicon glyphicon-okay-circle"></span>Join</a>
+
+  {%endif%}
+
+</div>
+{%endblock%}
+
+
+{%block group_content %}
+
+<div class="col-md-8">
+  {% if group.posts.count == 0 %}
+    <h2>No posts in this group yet!</h2>
+  {%else%}
+    {% for post in group.posts.all %}
+    <!-- include used below is similar to extends, here if there are some posts
+     in the group we will inject from the file posts/_post.html, the underscore used
+    is not mandatory but for the user to increase readability of the code-->
+      {% include "posts/_post.html" %}
+    {% endfor %}
+  {%endif%}
+</div>
+
+{%endblock%}
